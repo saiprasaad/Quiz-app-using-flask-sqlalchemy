@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% include 'navbar.html' %}
+{% block body %}
+<div class="container d-flex flex-column justify-content-center align-items-center vh-100">
+    <div class="card text-center" style="width: 20rem;">
+        <p class="display-4">Results</p>
+        <p class="fs-4 card-text">Score: {{score}}</p>
+        <a type="button" href="{{url_for('quiz.reset_quiz')}}" class="btn btn-warning">Restart Quiz</a>
+        <a type="button" href="{{url_for('quiz.home')}}" class="btn btn-primary">Go to home page</a>
+    </div>
+</div>
+{% endblock %}

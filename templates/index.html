@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% include 'navbar.html' %}
+{% block body %}
+<div class="container flex-column d-flex justify-content-center align-items-center vh-100">
+    <div class="jumbotron text-center">
+        <p class="display-4">Welcome to Quiz App</p>
+        <a class="btn btn-primary" href="{{url_for('quiz.quiz')}}">Start Quiz</a> <a class="btn btn-success">See Past Results</a>
+    </div>
+</div>
+{% endblock %}

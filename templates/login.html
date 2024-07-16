@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% include 'navbar.html' %}
+{% block body %}
+<div class="container text-center flex-column d-flex justify-content-center align-items-center vh-100">
+    <p class="display-4">Login</p>
+    <form method="POST" action="#">
+        <div class="mb-3 text-start">
+            <label class="form-label">Username</label>
+            <input class="form-control" name="username" type="text" />
+        </div>
+        <div class="mb-3 text-start">
+            <label class="form-label">Password</label>
+            <input class="form-control" name="password" type="password" />
+        </div>
+        <div class="mb-3 text-start">
+            <button class="btn btn-primary">Login</button>
+        </div>
+        <div class="mb-3 text-start">
+            <a href="{{url_for('quiz.register')}}">New User? Sign up Here</a>
+        </div>
+        {% if error %}
+        <div class="alert alert-danger" role="alert">
+            {{error}}
+        </div>
+        {% endif %}
+    </form>
+</div>
+{% endblock %}
