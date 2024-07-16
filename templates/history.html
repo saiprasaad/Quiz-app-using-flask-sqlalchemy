@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% include 'navbar.html' %}
+{% block body %}
+<div class="container flex-column d-flex justify-content-center align-items-center mt-5">
+    <p class="display-4  mt-5">Quiz History</p>
+    <table class="table  mt-5" style="width: 200px;">
+        <thead>
+            <td>Quiz ID</td>
+            <td>Score</td>
+        </thead>
+        <tbody>
+            {% for history in quiz_history %}
+            <tr>
+                <td>{{history.id}}</td>
+                <td>{{history.score}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

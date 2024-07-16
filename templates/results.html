@@ -6,7 +6,8 @@
         <p class="display-4">Results</p>
         <p class="fs-4 card-text">Score: {{score}}</p>
         <a type="button" href="{{url_for('quiz.reset_quiz')}}" class="btn btn-warning">Restart Quiz</a>
-        <a type="button" href="{{url_for('quiz.home')}}" class="btn btn-primary">Go to home page</a>
+        <a type="button" href="{{url_for('quiz.home')}}" class="btn btn-primary">Go to home page</a><br />
+        <a  href="{{url_for('quiz.history')}}" class="btn btn-success">See Past Results</a>
     </div>
 </div>
 {% endblock %}

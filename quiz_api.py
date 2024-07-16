@@ -115,3 +115,10 @@ def reset_quiz():
     session.pop("score", None)
     return redirect(url_for("quiz.quiz"))
 
+@quiz_bp.route('/history')
+def history():
+    if 'user' not in session or 'userid' not in session:
+        return redirect(url_for("login"))
+    else:
+        quiz_history = Quiz.query.filter_by(user_id=session['userid']).all()
+        return render_template('history.html', quiz_history=quiz_history)

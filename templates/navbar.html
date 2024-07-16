@@ -28,6 +28,9 @@
                          Welcome {{session['user']}}
                     </li>
                     <li class="nav-item mx-2">
+                        <a  href="{{url_for('quiz.history')}}" class="nav-link">See Past Results</a>
+                    </li>
+                    <li class="nav-item">
                         <a href = "{{url_for("quiz.logout")}}" class="nav-link">Logout</a>
                     </li>
                 </ul>
