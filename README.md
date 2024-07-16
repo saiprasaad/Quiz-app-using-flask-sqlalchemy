@@ -8,3 +8,4 @@ A web-based quiz application built with Flask and SQLAlchemy. This application a
 - Quiz Creation and Management
 - Dynamic Question Loading
 - Real-time Score Calculation
+- User Dashboard with Quiz History
